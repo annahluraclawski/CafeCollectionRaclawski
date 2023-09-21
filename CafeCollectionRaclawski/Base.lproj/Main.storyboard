@@ -36,11 +36,19 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mK4-4O-iNp">
-                                        <rect key="frame" x="0.0" y="227.66666666666669" width="393" height="227.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="227.66666666666669" width="393" height="76"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8jy-Yz-nC6">
+                                        <rect key="frame" x="0.0" y="303.66666666666669" width="393" height="151.66666666666669"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83g-xe-8sA">
                                         <rect key="frame" x="0.0" y="455.33333333333343" width="393" height="227.66666666666669"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -54,7 +62,7 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="mK4-4O-iNp" firstAttribute="height" secondItem="V0c-tW-e9L" secondAttribute="height" multiplier="0.3" id="NPe-0k-jh5"/>
+                                    <constraint firstItem="mK4-4O-iNp" firstAttribute="height" secondItem="V0c-tW-e9L" secondAttribute="height" multiplier="0.1" id="NPe-0k-jh5"/>
                                     <constraint firstItem="83g-xe-8sA" firstAttribute="height" secondItem="V0c-tW-e9L" secondAttribute="height" multiplier="0.3" id="Ou6-QI-48c"/>
                                     <constraint firstItem="iqj-ge-qaQ" firstAttribute="height" secondItem="V0c-tW-e9L" secondAttribute="height" multiplier="0.1" id="Pvd-Rb-jKr"/>
                                     <constraint firstItem="J7N-rz-PVy" firstAttribute="height" secondItem="V0c-tW-e9L" secondAttribute="height" multiplier="0.1" id="Xwa-FO-51J"/>
@@ -83,6 +91,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
