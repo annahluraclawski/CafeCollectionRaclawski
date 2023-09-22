@@ -7,27 +7,40 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     
-    @IBOutlet weak var menuOutlet: UILabel!
+    @IBOutlet weak var menuOutlet: UITextView!
+    
+    @IBOutlet weak var foodOutlet: UITextField!
+    
+    @IBOutlet weak var quantityOutlet: UITextField!
     
     @IBOutlet weak var cartOutlet: UILabel!
+    
+    let food : [String] = ["Fettucine Alfredo", "Cheeseburger", "Orange Chicken", "Pepperoni Pizza", "Turkey Sub", "Loaded Fries", "Caesar Salad"]
+    let price : [Double] = [14.99, 12.99, 11.99, 16.99, 10.99, 7.99, 10.99]
+    
+    var cart : [String : String] = [:]
+    
+    var menu = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        var food : [String] = ["Fettucine Alfredo", "Cheeseburger", "Orange Chicken", "Pepperoni Pizza", "Turkey Sub", "Loaded Fries", "Caesar Salad"]
-        var prices : [Double] = [14.99, 12.99, 11.99, 16.99, 10.99, 7.99, 10.99]
-        var menu = ""
+        foodOutlet.delegate = self
+        quantityOutlet.delegate = self
         
-        for (foo, pric) in zip(food, prices) {
+        for (foo, pric) in zip(food, price) {
             menu = "\(menu) \(foo): \(pric)\n"
-            
         }
         menuOutlet.text = "\(menu)"
-        
+        }
+    
+    @IBAction func addAction(_ sender: UIButton) {
+        foodOutlet.resignFirstResponder()
+        quantityOutlet.resignFirstResponder()
     }
     
 }
