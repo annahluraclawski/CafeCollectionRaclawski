@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
     
     
+    
     @IBOutlet weak var menuOutlet: UITextView!
     
     @IBOutlet weak var foodOutlet: UITextField!
@@ -36,6 +37,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
             menu = "\(menu) \(foo): \(pric)\n"
         }
         menuOutlet.text = "\(menu)"
+        
+        let item = foodOutlet.text!
+        
+        //cart[foodOutlet.text!] = Int(quantityOutlet.text!)
         }
     
     @IBAction func addAction(_ sender: UIButton) {
