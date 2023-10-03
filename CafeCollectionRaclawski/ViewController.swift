@@ -22,7 +22,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     let food : [String] = ["Fettucine Alfredo", "Cheeseburger", "Orange Chicken", "Pepperoni Pizza", "Turkey Sub", "Loaded Fries", "Caesar Salad"]
     let price : [Double] = [14.99, 12.99, 11.99, 16.99, 10.99, 7.99, 10.99]
     
-    var cart : [String : String] = [:]
+    var cart : [String : Int] = [:]
     
     var menu = ""
     
@@ -46,6 +46,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func addAction(_ sender: UIButton) {
         foodOutlet.resignFirstResponder()
         quantityOutlet.resignFirstResponder()
+        cart[foodOutlet.text!] = Int(quantityOutlet.text!)!
+        
     }
     
 }
